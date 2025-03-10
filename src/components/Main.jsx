@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../context/GlobalContext"
+import ResultsList from "./ResultsList"
 
 function Main() {
 
@@ -10,6 +11,8 @@ function Main() {
       <>
         <main>
             <h2>Films</h2>
+
+            <ResultsList type="movies" items={movies}/>
 
             <ul>
                 {movies.map( (element) => {
@@ -26,6 +29,8 @@ function Main() {
             </ul>
 
             <h2>Serie Tv</h2>
+
+            <ResultsList type="tvs" items={tvs}/>
 
             <ul>
                 {tvs.map( (element) => {
