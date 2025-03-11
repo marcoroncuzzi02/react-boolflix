@@ -1,0 +1,7 @@
+.language-flag {
+    width: 24px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+}

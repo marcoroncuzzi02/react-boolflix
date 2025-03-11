@@ -1,4 +1,5 @@
 import {GB, IT, JP, ES, FR, RO} from 'country-flag-icons/react/3x2'
+import {FaStar, FaRegStar} from 'react-icons/fa'
 
 function Card ({data, type}) {
 
@@ -8,23 +9,17 @@ function Card ({data, type}) {
     const renderLanguage = (language) => {
         switch (language){
             case 'en':
-                return
-                <GB title="Great Britain" className="language-flag" />
+                return <GB title="Great Britain" className="language-flag" />;
             case 'it':
-                return
-                <IT title="Italy" className="language-flag" />
+                return <IT title="Italy" className="language-flag" />;
             case 'ja':
-                return
-                <JP title="Japan" className="language-flag" />
+                return <JP title="Japan" className="language-flag" />;
             case 'es':
-                return
-                <GB title="Spain" className="language-flag" />
+                return <ES title="Spain" className="language-flag" />;
             case 'fr':
-                return
-                <GB title="France" className="language-flag" />
+                return <FR title="France" className="language-flag" />;
             case 'ro':
-                return
-                <GB title="Romania" className="language-flag" />
+                return <RO title="Romania" className="language-flag" />;
             default:
                 return <span>{language}</span>
         }
@@ -35,18 +30,19 @@ function Card ({data, type}) {
         const stars = []
         for( let i=1; i<=5; i++ ){
             stars.push(
-                i<=rating ? (
+                i <= rating ? (
                     <FaStar key= {i} className='star filled' />
                 ) : (
                     <FaRegStar key={i} className='star'/>
                 )
                 )
         }
+        return stars;
     }
 
     return(
         <>
-            <li>
+            <li className='card'>
                 <img src= { `https://image.tmdb.org/t/p/w342${data.poster_path}` } alt={title} />
                 <div>
                     <h3>{title}</h3>
@@ -57,7 +53,7 @@ function Card ({data, type}) {
                         lingua: {renderLanguage(data.original_language)}
                     </p>
                     <p>
-                        Voto: <span>{ renderVote(data.vote_average) } </span>
+                        Voto: <span className='stars'>{ renderVote(data.vote_average) } </span>
                     </p>
                 </div>
             </li>
