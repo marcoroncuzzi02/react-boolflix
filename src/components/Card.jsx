@@ -44,7 +44,7 @@ function Card ({data, type}) {
         <>
             <li className='card'>
                 <img src= { `https://image.tmdb.org/t/p/w342${data.poster_path}` } alt={title} />
-                <div>
+                <div className='card-info'>
                     <h3>{title}</h3>
                     <p>
                         Original Title: {originalTitle}

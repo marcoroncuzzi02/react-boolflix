@@ -14,7 +14,7 @@ function Main() {
 
             <ResultsList type="movies" items={movies}/>
 
-            <ul>
+            {/* <ul>
                 {movies.map( (element) => {
                     return(
                         <li key={element.id}>
@@ -26,13 +26,13 @@ function Main() {
                     )
                 })
             }
-            </ul>
+            </ul> */}
 
             <h2>Serie Tv</h2>
 
             <ResultsList type="tvs" items={tvs}/>
 
-            <ul>
+            {/* <ul>
                 {tvs.map( (element) => {
                     return(
                         <li key={element.id}>
@@ -41,7 +41,7 @@ function Main() {
                     )
                 })
             }
-            </ul>
+            </ul> */}
         </main>
       </>
     )

@@ -4,7 +4,7 @@ function Header() {
     return (
       <>
         <header>
-            <h1>header</h1>
+            <h1>BOOLFLIX</h1>
             <Search />
         </header>
       </>
